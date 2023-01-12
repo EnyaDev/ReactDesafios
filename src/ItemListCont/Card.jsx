@@ -1,17 +1,20 @@
 import Button from "./NavBar/Button";
 
 function Card(props) {
-  console.log(props);
+  const product = {
+    price: 250,
+    title: "Sleeves",
+    description: "White Rabiit sleeves",
+  };
 
   return (
     <div>
-      <h3>{props.title}</h3>
+      <h3>{product.title}</h3>
       <br />
       <img height="250px" src={props.img} alt={props.title} />
-      <h3>$ {props.price}</h3>
-      <small>{props.detail}</small>
+      <small>{product.description}</small>
+      <h3>$ {product.price}</h3>
       <Button padding="15px" color="light blue">
-        See more..
       </Button>
     </div>
   );
